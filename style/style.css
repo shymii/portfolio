@@ -1,0 +1,204 @@
+/* colors
+white: #c3d3de
+grey: #455d6e
+blue: #6daedb
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+    background: #455d6e;
+}
+a {
+    text-decoration: none;
+    color: #6daedb
+}
+.main-title {
+    font-size: 2em;
+    margin-top: 2.5em;
+    margin-bottom: 3em;
+}
+
+#header {
+    width: 100vw;
+    height: 10vh;
+    margin-bottom: 1em;
+    position: fixed;
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar-list {
+    list-style: none;
+    display: flex;
+    margin-right: 2em;
+}
+.navbar-list-item {
+    margin-right: 1.5em;
+    margin-top: 2em;
+}
+.navbar-list-item a {
+    padding: .7em;
+    border-radius: .7em;
+    color: #c3d3de;
+}
+.navbar-list-item a:hover {
+    background-color: #c3d3de;
+    color: #455d6e;
+}
+
+@keyframes slide-in-right {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0);}
+}
+@keyframes slide-in-left {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0);}
+}
+
+#welcome {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c3d3de;
+    animation: slide-in-right 1.5s;
+}
+
+#welcome h1 {
+    font-size: 3em;
+}
+#welcome p {
+    font-size: 1.5em;
+}
+
+
+#about {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #c3d3de;
+}
+#about i {
+    color: #6daedb
+}
+.about-content {
+    padding: 1.5em;
+    font-size: 1.5em;
+}
+.about-text {
+    padding: 1em;
+}
+.about-abilities {
+    padding: 1em;
+}
+.about-abilities p {
+    margin-bottom: .5em;
+}
+.about-abilities-list {
+    list-style: none;
+}
+
+
+#projects {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c3d3de;
+}
+#projects i {
+    color: #6daedb
+}
+.project {
+    padding: 1em;
+    margin-bottom: 2em;
+    width: 60%;
+    font-size: 1.2em;
+}
+.project-title {
+    font-size: 1.2em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+.project-description {
+    padding: 1em 0;
+}
+.project-technologies {
+    padding: 1em 0;
+}
+
+
+#contact {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c3d3de;
+}
+.contact-content {
+    font-size: 1.2em
+}
+.contact-content p {
+    text-align: center;
+    margin-bottom: 1.3em;
+}
+.contact-content ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.contact-content li {
+    width: 60px;
+    height: 60px;
+}
+.contact-content ul a {
+    display: block;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #6daedb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #455d6e;
+}
+.contact-content ul a:hover {
+    color: #6daedb;
+}
+.contact-content ul a .fab, .contact-content ul a .far {
+    position: relative;
+    z-index: 1000;
+}
+.contact-content ul a::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #c3d3de;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.contact-content ul a:hover::before {
+    transform: scale(1);
+}
+
+
+.scrolled {
+    animation: slide-in-right 1.5s;
+}
