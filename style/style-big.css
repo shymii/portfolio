@@ -4,20 +4,6 @@ grey: #455d6e
 blue: #6daedb
 */
 
-
-@keyframes slide-in-right {
-    from {transform: translateX(100%);}
-    to {transform: translateX(0);}
-}
-@keyframes slide-in-left {
-    from {transform: translateX(-100%);}
-    to {transform: translateX(0);}
-}
-@keyframes hide-in-right {
-    from {transform: translateX(0);}
-    to {transform: translateX(100%);}
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -35,13 +21,9 @@ a {
 }
 .main-title {
     font-size: 2em;
-    margin-top: 2em;
+    margin-top: 2.5em;
+    margin-bottom: 3em;
 }
-.scrolled {
-    animation: slide-in-right 1.5s;
-}
-
-
 
 #header {
     width: 100vw;
@@ -50,58 +32,17 @@ a {
     position: fixed;
     background: transparent;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-}
-.navbar-borgier {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-.navbar-borgier i {
-    position: absolute;
-    top: 2em;
-    right: 2em;
-    color: #c3d3de;
-}
-.navbar-list-wrapper {
-    width: 100%;
-    position: absolute;
-    top: 10vh;
-}
-.navbar-borgier-list {
-    list-style: none;
-    text-align: center;
-}
-.navbar-borgier-list-item {
-    padding: .3em;
-}
-.navbar-borgier-list-item a {
-    color: #c3d3de;
-}
-.borgier {
-    transition-duration: .5s;
-}
-.active {
-    transform: rotate(90deg);
-}
-.show {
-    animation: slide-in-left .5s;
-}
-.hide {
-    animation: hide-in-right .5s;
-}
-.hidden {
-    transform: translateX(-100%);
-}
-
-.navbar {
-    display: none;
 }
 .navbar-list {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    margin-right: 2em;
+}
+.navbar-list-item {
+    margin-right: 1.5em;
+    margin-top: 2em;
 }
 .navbar-list-item a {
     padding: .7em;
@@ -113,7 +54,14 @@ a {
     color: #455d6e;
 }
 
-
+@keyframes slide-in-right {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0);}
+}
+@keyframes slide-in-left {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0);}
+}
 
 #welcome {
     width: 100vw;
@@ -125,15 +73,13 @@ a {
     color: #c3d3de;
     animation: slide-in-right 1.5s;
 }
+
 #welcome h1 {
-    font-size: 2.5em;
-    text-align: center;
+    font-size: 3em;
 }
 #welcome p {
-    font-size: 1.2em;
-    text-align: center;
+    font-size: 1.5em;
 }
-
 
 
 #about {
@@ -165,7 +111,6 @@ a {
 }
 
 
-
 #projects {
     min-height: 100vh;
     width: 100vw;
@@ -195,7 +140,6 @@ a {
 .project-technologies {
     padding: 1em 0;
 }
-
 
 
 #contact {
@@ -255,33 +199,6 @@ a {
 }
 
 
-
-@media screen and (min-width: 1024px){
-    .main-title {
-        margin-top: 2.5em;
-        margin-bottom: 3em;
-    }
-    #header {
-        justify-content: flex-end;
-    }
-    .navbar-borgier {
-        display: none;
-    }
-    .navbar {
-        display: block;
-    }
-    .navbar-list {
-        display: flex;
-        margin-right: 2em;
-    }
-    .navbar-list-item {
-        margin-right: 1.5em;
-        margin-top: 2em;
-    }
-    #welcome h1 {
-        font-size: 3em;
-    }
-    #welcome p {
-        font-size: 1.5em;
-    }
+.scrolled {
+    animation: slide-in-right 1.5s;
 }
